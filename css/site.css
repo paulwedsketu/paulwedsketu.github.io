@@ -37,6 +37,10 @@ html, body {
     line-height: 1.5;
 }
 
+.section {
+    background-size: cover;
+}
+
 .bride-container {
     background-color: #FF6A6A;
     color: #fff;
@@ -55,11 +59,6 @@ html, body {
     font-family: 'Cantarell';
 }
 
-.wedding-container {
-    background-color: #FFB6C1;
-    color: #fff;
-}
-
 .vertical-center {
     min-height: 100%;
     min-height: 100vh;
@@ -76,7 +75,76 @@ html, body {
     letter-spacing: 2px;
 }
 
-/*h2 {*/
-/*font-family: 'PT Sans Narrow', sans-serif;*/
-/*letter-spacing: 2px;*/
-/*}*/
+.wedding-container {
+    background-color: #FFB6C1;
+    color: #fff;
+}
+
+div .engagement-container {
+    background-image: url(../images/engagementring.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #464646;
+}
+
+div .reception-container {
+    background-image: url(../images/reception.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #464646;
+    color: #fff;
+}
+
+.fa-cursor {
+    cursor: pointer;
+}
+
+#menu li {
+    display: inline-block;
+    margin: 10px;
+    color: #000;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.5);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#menu li.active {
+    background: #666;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: #000;
+}
+
+#menu li.active a:hover {
+    color: #000;
+}
+
+#menu li:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+#menu li a,
+#menu li.active a {
+    padding: 9px 18px;
+    display: block;
+}
+
+#menu li.active a {
+    color: #fff;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 40px;
+    z-index: 70;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}

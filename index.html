@@ -10,8 +10,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<ul id="menu">
+    <li data-menuanchor="welcome"><a href="#welcome">Welcome</a></li>
+    <li data-menuanchor="bride"><a href="#bride">Bride</a></li>
+    <li data-menuanchor="groom"><a href="#groom">Groom</a></li>
+    <li data-menuanchor="engagement"><a href="#engagement">Engagement</a></li>
+    <li data-menuanchor="reception"><a href="#reception">Reception</a></li>
+</ul>
 <div id="fullpage">
-    <div class="section intro-container">
+    <div class="section intro-container" data-anchor="welcome">
         <div class="container-fluid text-left">
             <div><h3>So now faith, hope and love abide, these three; but the greatest of these is <b>love</b>...</h3>
             </div>
@@ -27,11 +34,11 @@
                 excited to take the next step in our lives as we plan our wedding in the beautiful city of Mumbai a.k.a
                 Bombay </h5>
             <div class="text-center">
-                <i class="fa fa-angle-down fa-5x"></i>
+                <i class="fa fa-angle-down fa-5x fa-cursor" onclick="$.fn.fullpage.moveSectionDown();"></i>
             </div>
         </div>
     </div>
-    <!--<div class="section bride-container">
+    <div class="section bride-container" data-anchor="bride">
         <div class="container-fluid text-center">
             <h1> About the bride </h1>
             <hr/>
@@ -43,15 +50,15 @@
                 </blockquote>
             </div>
             <div class="text-center">
-                <i class="fa fa-angle-down fa-5x"></i>
+                <i class="fa fa-angle-down fa-5x fa-cursor" onclick="$.fn.fullpage.moveSectionDown();"></i>
             </div>
         </div>
     </div>
-    <div class="section groom-container">
+    <div class="section groom-container" data-anchor="groom">
         <div class="container-fluid text-center">
             <h1> About the groom </h1>
             <hr/>
-            <div style="padding-top: 5%"><img src="images/ketu.png" class="img-circle"></div>
+            <div style="padding-top: 5%"><img src="images/paul.jpg" class="img-circle"></div>
             <div class="text-center"><h2>Paul Williams</h2></div>
             <div class="text-left about-bride-groom" style="padding-top: 5%">
                 <blockquote>A computer nerd from Bangalore. Son of Pramila and Jesudoss. Dreams about buying a
@@ -60,15 +67,51 @@
             </div>
         </div>
         <div class="text-center">
-            <i class="fa fa-angle-down fa-5x"></i>
+            <i class="fa fa-angle-down fa-5x fa-cursor" onclick="$.fn.fullpage.moveSectionDown();"></i>
         </div>
     </div>
-    <div class="section wedding-container">
+    <div class="section engagement-container" data-anchor="engagement">
         <div class="container-fluid">
-            <h1> About the wedding </h1>
-            <hr/>
+            <div class="row text-center">
+                <h2>Engagement & Sangeet</h2>
+                <h4>15 Dec 2016 @ 05:00 PM IST</h4>
+                <div class="col-lg-12">
+                    <h5><b>The Bay View Restaurant & Banquets</b><br/>
+                        Gorai Creek, Borvali West<br/>
+                        Mumbai - 400091
+                    </h5>
+                    <br/>
+                    <h4>
+                        <a href="http://google.co.in/maps/dir/''/the+bay+view+banquets+borivali/@19.2334843,72.7546061">
+                            Take me there !
+                        </a>
+                    </h4>
+                </div>
+            </div>
         </div>
-    </div>-->
+        <div class="text-center">
+            <i class="fa fa-angle-down fa-5x fa-cursor" onclick="$.fn.fullpage.moveSectionDown();"></i>
+        </div>
+    </div>
+    <div class="section reception-container" data-anchor="reception">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <h2>Reception</h2>
+                <h4>17 Dec 2016 @ 07:30 PM IST</h4>
+                <div class="col-lg-12">
+                    <h5><b>Don Bosco High School</b><br/>
+                        Vazira Naka, Borvali West<br/>
+                        Mumbai - 400091
+                    </h5>
+                    <br/>
+                    <h4>
+                        <a href="http://google.co.in/maps/dir/''/don+bosco+high+school+borivali/@19.2305669,72.7716405">
+                            Take me there !</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type="text/javascript"
@@ -79,6 +122,8 @@
             navigation: true,
             navigationPosition: 'right',
             navigationTooltips: ['Welcome', 'About the bride', 'About the groom', 'About the wedding'],
+            anchors: ['welcome', 'bride', 'groom', 'engagement', 'reception'],
+            menu: '#menu'
         });
     });
 </script>

@@ -51,7 +51,7 @@
             <div class="text-center"><h2>Paul Williams</h2></div>
             <div class="text-left about-bride-groom" style="padding-top: 5%">
                 <blockquote>A computer nerd from Bangalore. Son of Pramila and Jesudoss. Dreams about buying a
-                    hyabusa bike and gadgets (specifically Apple) .
+                    hyabusa bike and gadgets (specifically Apple).
                 </blockquote>
             </div>
         </div>
@@ -114,6 +114,18 @@
             navigationPosition: 'right',
             navigationTooltips: ['Welcome', 'About the bride', 'About the groom', 'About the wedding'],
         });
+        var IS_IPAD = navigator.userAgent.match(/iPad/i) != null;
+        var IS_IPHONE = (navigator.userAgent.match(/iPhone/i) != null) || (navigator.userAgent.match(/iPod/i) != null);
+
+        if (IS_IPAD || IS_IPHONE) {
+
+            $('a').on('click touchend', function() {
+                var link = $(this).attr('href');
+                window.open(link,'_blank'); // opens in new window as requested
+
+                return false; // prevent anchor click
+            });
+        }
     });
 </script>
 </body>
